@@ -13,7 +13,7 @@ const [episodes, setEpisodes] = useState([]);
     .get('https://rickandmortyapi.com/api/episode/')
     .then(response => {
       setEpisodes(response.data.results);
-      console.log(response.data.results);
+      console.log(episodes);
     })
     .catch(error => {
       console.log('server error', error);
@@ -42,7 +42,7 @@ export function EpisodesDetails ({episodes}){
     const{episode, name, air_date, characters } = episodes
       return(
         <Card>
-          <Link to={'/EpisodesCard'}>
+          <Link to={'/episodes/:id'}>
         <Card.Content>
           <Card.Header>Episode: {episode}</Card.Header>
           <Card.Meta>
