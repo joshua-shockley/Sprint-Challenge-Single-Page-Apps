@@ -27,7 +27,7 @@ import WelcomePage from './WelcomePage';
 // };
 
 const panes = [
-{ menuItem: 'MENU', render: () => <Tab.Pane><NavLink exact to={`/`}>Home</NavLink>    <NavLink exact to={`/LocationCard`}>Locations</NavLink>   <NavLink exact to={`/CharacterCard`}>Characters</NavLink></Tab.Pane> },
+{ menuItem: 'MENU', render: () => <Tab.Pane><NavLink exact to={`/`}>Home</NavLink>    <NavLink exact to={`/LocationsList`}>Locations</NavLink>   <NavLink exact to={`/CharacterList`}>Characters</NavLink></Tab.Pane> },
   ]
   
   const TabNav = () => <Tab panes={panes} />
