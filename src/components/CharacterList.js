@@ -6,9 +6,10 @@ import {Link} from 'react-router-dom';
 
 
 
-export default function CharacterList() {
+export default function CharacterList(props) {
   // TODO: Add useState to track data from useEffect
 const [character, setCharacter] = useState([]);
+const id = props.match.params.id;
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
@@ -61,7 +62,7 @@ const{name, image, created, status, species} = character
     <Card.Content extra>
       <a>
         <Icon name='aliveOrDead' />
-        Alive or Dead:{status}
+        {status}
       </a>
     </Card.Content>
       </Link>
