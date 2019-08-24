@@ -1,5 +1,7 @@
-import React from "react";
-// import CharacterList from "./CharacterList";
+import React, { useEffect, useState } from "react";
+import axios from 'axios';
+import { Card, Icon, Image} from 'semantic-ui-react';
+import {Link} from 'react-router-dom';
 
 // export default function CharacterCard() {
 //   return <span>todo: character</span>;
@@ -14,7 +16,7 @@ const id = props.match.params.id;
        axios
         .get(`https://rickandmortyapi.com/api/character/status/${id}`)
         .then(response => {
-          setMovie(response);
+          setCharacter(response);
           console.log(response);
         })
         .catch(error => {
@@ -34,7 +36,7 @@ const id = props.match.params.id;
     return <div>Loading character information...</div>;
   }
 
-  const { name, director, metascore, stars } = movie;
+  // const character = ({... character, character.id });
   return (
     <div className="save-wrapper">
       {/* <div className="movie-card">

@@ -8,6 +8,8 @@ import CharacterList from './components/CharacterList.js';
 import LocationsList from './components/LocationsList.js';
 import EpisodesList from './components/EpisodesList.js';
 import EpisodeCard from './components/EpisodeCard.js';
+import LocationCard from './components/LocationCard';
+import CharacterCard from './components/CharacterCard';
 
 export default function App() {
 
@@ -21,28 +23,26 @@ export default function App() {
       component={WelcomePage}
       />
       <Route 
-      path="/CharacterList"
+      path="/characterList"
       component={CharacterList}
       />
       <Route 
-      path="/LocationsList"
+      path="/locationsList"
       component={LocationsList}
       />
       <Route
-      path="/EpisodesList"
+      path="/episodesList/"
       component={EpisodesList}
       />
       <Route
-      path="/episodes/:id"
-      render={episodes => (<EpisodeCard {...episodes} 
-      key={episodes.id}/>)}
-      // component={EpisodeCard}
+      path="/episodesList/:id"
+      component={EpisodeCard}    
       />
-      {/* <Route
-      path="/LocationCard"
+     <Route
+      path="/locationsList/:id"
       component={LocationCard}
       />
-      <Route
+      {/* <Route
       path="/CharacterCard"
       component={CharacterCard}
       /> */}

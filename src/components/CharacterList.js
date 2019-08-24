@@ -18,7 +18,7 @@ const id = props.match.params.id;
     .get('https://rickandmortyapi.com/api/character/')
     .then(response => {
       setCharacter(response.data.results);
-      console.log(response.data);
+      // console.log(response.data);
     })
     .catch(error => {
       console.log('server error', error);
